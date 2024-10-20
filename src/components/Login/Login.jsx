@@ -7,7 +7,9 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Login = () => {
-    const {logIn} = useContext(AuthContext)
+        
+    const {logIn, googleLogin, githubLogin} = useContext(AuthContext);
+    
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -26,6 +28,20 @@ const Login = () => {
 
     }
 
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then((()=> console.log('login by google')))
+        .catch(()=> console.log("error found")
+        )
+    }
+
+    const handleGitHubLogin = () => {
+        githubLogin()
+        .then(() => {console.log("github login successfully")
+        })
+        .catch(() => console.log("github got error")
+        )
+    }
     return (
         <div className="h-screen flex justify-center items-center">
             <div className="border border-violet-400 rounded-xl max-w-[50%] p-10 space-y-4">
@@ -72,11 +88,11 @@ const Login = () => {
                     </button>
                 </form>
 
-                <button className="btn btn-warning btn-outline w-full">
+                <button onClick={handleGoogleLogin} className="btn btn-warning btn-outline w-full">
                     <FcGoogle className="text-xl mr-2" />
                     Log in with Google
                 </button>
-                <button className="btn btn-outline w-full">
+                <button onClick={handleGitHubLogin} className="btn btn-outline w-full">
                     <BsGithub className="text-xl mr-2" />
                     Log in with GitHub
                 </button>
