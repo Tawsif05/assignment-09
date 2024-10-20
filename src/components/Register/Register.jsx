@@ -6,11 +6,11 @@ import { CiUser } from "react-icons/ci";
 import { FaImage } from "react-icons/fa";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
-const Register = () => {
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
-    const {registerUser} = useContext(AuthContext);
-    
-    
+const Register = () => {
+    const { registerUser, setError} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -24,23 +24,37 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const photoUrl = e.target.photoUrl.value;
-        
+
+        if (password.length < 6) {
+            toast.error("Password must be 6 characters or longer");
+            return;
+        }
+
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).*$/.test(password)) {
+            toast.error("Password must have one uppercase and one lowercase letter");
+            return;
+        }
+
+        setError('');
         registerUser(email, password)
-        .then(res => {
-            updateProfile(res.user, {
-                displayName: name, photoURL: photoUrl
+            .then((res) => {
+                updateProfile(res.user, {
+                    displayName: name,
+                    photoURL: photoUrl,
+                })
+                .then(() => {
+                    toast.success("Registration successful!");
+                })
+                .catch((error) => {
+                    toast.error(error.message);
+                });
+                console.log(res.user);
             })
-            .then(() => {})
-            .catch()
-            console.log(res.user);
-            
-        })
-        .catch(error => console.log(error.message)
-        )
-    }
-
-    
-
+            .catch((error) => {
+                toast.error(error.message);
+            });
+            e.target.reset();
+    };
 
     return (
         <div className="h-screen flex justify-center items-center">
@@ -64,7 +78,7 @@ const Register = () => {
                         <input name="email" type="email" className="grow" placeholder="Email" />
                     </label>
                     <label className="input input-bordered flex items-center gap-2">
-                    <FaImage />
+                        <FaImage />
                         <input name="photoUrl" type="text" className="grow" placeholder="Photo Url" />
                     </label>
                     <label className="input input-bordered flex items-center gap-2 relative">
@@ -83,7 +97,7 @@ const Register = () => {
                             {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
                         </button>
                     </label>
-
+                    <ToastContainer />
                     <p>
                         Already have an account?{" "}
                         <Link to="/login" className="text-blue-600">

@@ -20,7 +20,7 @@ const Login = () => {
         const password = e.target.password.value;
 
         logIn(email, password)
-        .then((res) => {console.log("login successfully")
+        .then(() => {console.log("login successfully")
         })
         .catch()
 
