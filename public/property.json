@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Luxury Villa in Beverly Hills",
+    "image": "./Property01.jpeg",
+    "segment_name": "Luxury",
+    "description": "A stunning luxury villa in the heart of Beverly Hills with breathtaking views.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "4000 sq ft",
+    "location": "Beverly Hills, CA",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "year_built": 2019,
+      "features": ["Home theater", "Wine cellar", "Outdoor kitchen"]
+    }
+  },
+  {
+    "id": 2,
+    "estate_title": "Modern Apartment in Downtown LA",
+    "image": "./Property02.jpeg",
+    "segment_name": "Apartment",
+    "description": "A sleek and modern apartment in downtown Los Angeles, close to all amenities.",
+    "price": "$3,500/month",
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "Downtown Los Angeles, CA",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "year_built": 2021,
+      "features": ["Rooftop terrace", "Gym access", "24-hour concierge"]
+    }
+  },
+  {
+    "id": 3,
+    "estate_title": "Cozy Family Home in Suburbs",
+    "image": "./Property03.jpeg",
+    "segment_name": "Family Home",
+    "description": "A cozy and spacious home perfect for families, located in a quiet suburban area.",
+    "price": "$450,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "Irvine, CA",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "year_built": 2010,
+      "features": ["Large backyard", "Fireplace", "Walk-in closet"]
+    }
+  },
+  {
+    "id": 4,
+    "estate_title": "Beachfront Condo in Miami",
+    "image": "./Property04.jpeg",
+    "segment_name": "Condo",
+    "description": "A beautiful beachfront condo with direct ocean views and luxurious amenities.",
+    "price": "$4,000/month",
+    "status": "rent",
+    "area": "1800 sq ft",
+    "location": "Miami, FL",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "year_built": 2018,
+      "features": ["Balcony with ocean view", "Private beach access", "Fitness center"]
+    }
+  },
+  {
+    "id": 5,
+    "estate_title": "Penthouse in New York City",
+    "image": "./Property05.jpeg",
+    "segment_name": "Penthouse",
+    "description": "An extravagant penthouse in the heart of Manhattan with panoramic city views.",
+    "price": "$12,000,000",
+    "status": "sale",
+    "area": "5000 sq ft",
+    "location": "Manhattan, NY",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "year_built": 2015,
+      "features": ["Private rooftop", "Smart home technology", "Jacuzzi"]
+    }
+  },
+  {
+    "id": 6,
+    "estate_title": "Suburban Bungalow in Austin",
+    "image": "./Property06.jpeg",
+    "segment_name": "Bungalow",
+    "description": "A charming bungalow with a large backyard, ideal for peaceful suburban living.",
+    "price": "$300,000",
+    "status": "sale",
+    "area": "1600 sq ft",
+    "location": "Austin, TX",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "year_built": 2005,
+      "features": ["Wrap-around porch", "Garden shed", "Open floor plan"]
+    }
+  },
+  {
+    "id": 7,
+    "estate_title": "Countryside Cottage",
+    "image": "./Property07.jpeg",
+    "segment_name": "Cottage",
+    "description": "A quaint cottage in the countryside, offering serene and quiet living spaces.",
+    "price": "$2,500/month",
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "Nashville, TN",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "year_built": 1995,
+      "features": ["Fireplace", "Wooded lot", "Country kitchen"]
+    }
+  },
+  {
+    "id": 8,
+    "estate_title": "Luxury Mansion in Malibu",
+    "image": "./Property08.jpeg",
+    "segment_name": "Mansion",
+    "description": "An opulent mansion with ocean views and top-of-the-line luxury amenities.",
+    "price": "$25,000,000",
+    "status": "sale",
+    "area": "10000 sq ft",
+    "location": "Malibu, CA",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 6,
+      "bathrooms": 8,
+      "year_built": 2022,
+      "features": ["Infinity pool", "Home theater", "Gourmet kitchen"]
+    }
+  },
+  {
+    "id": 9,
+    "estate_title": "Lakefront Cabin",
+    "image": "./Property09.jpeg",
+    "segment_name": "Cabin",
+    "description": "A cozy cabin by the lake, perfect for a weekend getaway or year-round living.",
+    "price": "$750,000",
+    "status": "sale",
+    "area": "2200 sq ft",
+    "location": "Lake Tahoe, CA",
+    "facilities": ["living room", "swimming pool", "Kitchen"],
+    "details": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "year_built": 2010,
+      "features": ["Lake access", "Wood-burning stove", "Wrap-around deck"]
+    }
+  }
+]
