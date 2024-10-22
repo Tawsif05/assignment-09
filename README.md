@@ -13,8 +13,9 @@
 - **Toast Notifications**: Real-time feedback for users when performing actions like updating profiles or logging in.
 
 ## NPM Packages Used
-- **firebase**: For user authentication and backend services.
-- **react-hot-toast**: To display notifications and feedback to users.
-- **react-helmet-async**: For managing the document head, such as page titles.
+- **AOS Package**
+- **Animate.css**
+- **Swiper slider**
 
 ---
+
