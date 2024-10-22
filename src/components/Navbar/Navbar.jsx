@@ -4,8 +4,9 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
-
+    // console.log(user);
+    console.log(user?.photoURL);
+    
     const handleLogOut = () => {
         logOut()
     }
@@ -108,7 +109,7 @@ const Navbar = () => {
                                     <div className="w-10 rounded-full hover:tooltip">
                                         <img
                                             alt="Tailwind CSS Navbar component"
-                                            src={user.photoURL} />
+                                            src={user?.photoURL} />
                                     </div>
                                 </div>
                             </div>

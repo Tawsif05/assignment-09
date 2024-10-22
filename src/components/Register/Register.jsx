@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-    const { registerUser, setError} = useContext(AuthContext);
+    const { registerUser, setError, setUser} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -44,11 +44,17 @@ const Register = () => {
                     photoURL: photoUrl,
                 })
                 .then(() => {
+                    setUser({
+                        ...res.user,
+                        displayName: name,
+                        photoURL: photoUrl,
+                    })
                     toast.success("Registration successful!");
                 })
                 .catch((error) => {
                     toast.error(error.message);
                 });
+                
                 console.log(res.user);
             })
             .catch((error) => {
