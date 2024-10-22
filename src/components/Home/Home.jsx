@@ -31,7 +31,7 @@ const Home = () => {
                 {/* Overlay Text */}
                 <div className="absolute top-1/3 left-0 w-full text-center z-10">
                     <div className='max-w-[1000px] mx-auto'>
-                        <h1 className="text-white text-8xl font-bold">Find Your Dream House By Us</h1>
+                        <h1 className="text-white text-4xl lg:text-8xl font-bold">Find Your Dream House By Us</h1>
                     </div>
                     <p className="text-white mt-4 text-4xl font-medium">Discover amazing content below</p>
                 </div>

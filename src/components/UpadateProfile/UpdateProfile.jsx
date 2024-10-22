@@ -37,11 +37,11 @@ const UpdateProfile = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-center items-center my-[5%] sm:mt-[15%] lg:mt-[5%]">
             <Helmet>
                 <title>CityHaven | Update Profile</title>
             </Helmet>
-            <div className="border border-violet-400 rounded-2xl flex flex-col gap-5 justify-center w-[50%] items-center p-5">
+            <div className="border border-violet-400 rounded-2xl flex flex-col gap-5 justify-center w-[90%] md:w-[50%] items-center p-5">
                 <h1 className="text-xl font-bold">Update Profile</h1>
 
                 <form className="flex flex-col gap-4 w-full" onSubmit={handleUpdateProfile}>
@@ -72,11 +72,11 @@ const UpdateProfile = () => {
                     </button>
                 </form>
 
-                <div className="mt-5 text-center">
+                <div className="mt-5 text-center w-full">
                     <h2 className="text-lg font-semibold">Current Profile</h2>
                     <p><strong>Name:</strong> {user.displayName}</p>
                     <p><strong>Email:</strong> {user.email}</p>
-                    <p><strong>Photo URL:</strong> {user.photoURL}</p>
+                    <div className="break-words w-full"><strong>Photo URL:</strong> {user.photoURL}</div>
                 </div>
             </div>
         </div>

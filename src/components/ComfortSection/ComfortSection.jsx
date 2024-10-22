@@ -10,11 +10,11 @@ const ComfortSection = () => {
     }, []);
 
     return (
-        <div className="flex justify-between gap-5 mt-20" data-aos="flip-left"
+        <div className="flex sm:flex-col md:flex-col lg:flex-row justify-between gap-5 mt-20" data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="2000">
             <div className="flex flex-col items-center justify-center gap-10">
-                <h2 className="text-3xl font-bold flex ml-[-15%] animate__animated animate__bounce animate__infinite">Comfort is our top priority for you</h2>
+                <h2 className="text-3xl font-bold flex lg:ml-[-15%] sm:ml-0 animate__animated animate__bounce animate__infinite sm:text-wrap">Comfort is our top priority for you</h2>
                 <h2 className="text-base text-violet-400 w-[70%]">At the heart of each of our investments is a strategy to build or buy a portfolio of real estate and the all platform should aim real estate. We providing a great service for you .</h2>
             </div>
             <div className="flex flex-col justify-center items-center gap-4">
