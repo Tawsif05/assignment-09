@@ -1,8 +1,18 @@
 import 'animate.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ComfortSection = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     return (
-        <div className="flex justify-between gap-5 mt-20">
+        <div className="flex justify-between gap-5 mt-20" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
             <div className="flex flex-col items-center justify-center gap-10">
                 <h2 className="text-3xl font-bold flex ml-[-15%] animate__animated animate__bounce animate__infinite">Comfort is our top priority for you</h2>
                 <h2 className="text-base text-violet-400 w-[70%]">At the heart of each of our investments is a strategy to build or buy a portfolio of real estate and the all platform should aim real estate. We providing a great service for you .</h2>

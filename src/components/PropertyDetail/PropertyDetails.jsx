@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const PropertyDetails = () => {
     const { id } = useParams();
@@ -25,6 +26,9 @@ const PropertyDetails = () => {
 
     return (
         <div className="h-[75vh] flex justify-center mt-20">
+            <Helmet>
+                <title>CityHaven | PropertyDetails</title>
+            </Helmet>
             <div className="card glass w-[70%]">
                 <figure>
                     <img  src={`../../../public/${image}`} alt="" />

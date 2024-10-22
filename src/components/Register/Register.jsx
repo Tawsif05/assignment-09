@@ -8,6 +8,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { registerUser, setError} = useContext(AuthContext);
@@ -58,6 +59,9 @@ const Register = () => {
 
     return (
         <div className="h-screen flex justify-center items-center">
+            <Helmet>
+                <title>CityHaven | Register</title>
+            </Helmet>
             <div className="border border-violet-400 rounded-xl max-w-[50%] p-10 space-y-4">
                 <form onSubmit={handleRegister} className="space-y-5">
                     <label className="input input-bordered flex items-center gap-2">

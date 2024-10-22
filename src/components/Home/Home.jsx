@@ -16,11 +16,15 @@ import 'swiper/css/autoplay';
 import SellProperty from '../SellProperty/SellProperty';
 import ComfortSection from '../ComfortSection/ComfortSection';
 import AvailableType from '../AvailableType/AvailableType';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
     return (
         <div>
+            <Helmet>
+                <title>CityHaven | Home</title>
+            </Helmet>
             <div className="w-full h-screen relative">
 
 

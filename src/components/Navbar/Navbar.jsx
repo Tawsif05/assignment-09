@@ -1,6 +1,15 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+
+    const handleLogOut = () => {
+        logOut()
+    }
+
     const navlinks = (
         <>
             <li>
@@ -23,16 +32,18 @@ const Navbar = () => {
                     Contact
                 </NavLink>
             </li>
-            <li>
-                <NavLink
-                    to="/updateprofile"
-                    className={({ isActive }) =>
-                        isActive ? "active-link-class border border-violet-500 bg-black font-bold" : ""
-                    }
-                >
-                    Update Profile
-                </NavLink>
-            </li>
+            {user &&
+                <li>
+                    <NavLink
+                        to="/updateprofile"
+                        className={({ isActive }) =>
+                            isActive ? "active-link-class border border-violet-500 bg-black font-bold" : ""
+                        }
+                    >
+                        Update Profile
+                    </NavLink>
+                </li>
+            }
             <li>
                 <NavLink
                     to="/register"
@@ -79,7 +90,7 @@ const Navbar = () => {
                     </div>
                     {/* Website Logo or Title */}
                     <a href="#home" className="text-xl font-bold">
-                        My Website
+                        CityHaven
                     </a>
                 </div>
 
@@ -90,9 +101,24 @@ const Navbar = () => {
 
                 {/* Navbar End */}
                 <div className="navbar-end">
-                    <Link to="/login">
-                        <button className="btn btn-primary btn-outline w-[120px]">Log in</button>
-                    </Link>
+                    {
+                        user ? <>
+                            <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full hover:tooltip">
+                                        <img
+                                            alt="Tailwind CSS Navbar component"
+                                            src={user.photoURL} />
+                                    </div>
+                                </div>
+                            </div>
+                            <button onClick={handleLogOut} className="btn btn-primary btn-outline w-[120px] ml-4">Log Out</button>
+                        </> : <Link to="/login">
+                            <button className="btn btn-primary btn-outline w-[120px] ml-4">Log in</button>
+                        </Link>
+
+                    }
+
                 </div>
             </div>
         </>
