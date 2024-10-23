@@ -3,7 +3,7 @@
 **CityHaven** is a modern real estate platform designed to help users explore and manage property listings. This platform provides a user-friendly interface for viewing properties, updating profiles, and managing account settings with secure authentication.
 
 ## Live Site URL
-[CityHaven Live](https://your-live-site-url.com)
+[CityHaven Live](https://jocular-griffin-468f99.netlify.app/)
 
 ## Features
 - **User Authentication**: Secure login and registration using Firebase Auth with options for Google and GitHub sign-in.

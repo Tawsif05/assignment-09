@@ -66,7 +66,7 @@ const UpdateProfile = () => {
 
                     <button
                         type="submit"
-                        className="mt-4 w-full bg-violet-500 text-white p-2 rounded-md"
+                        className="btn mt-4 w-full bg-violet-500 text-white p-2 rounded-md"
                     >
                         Update Profile
                     </button>
